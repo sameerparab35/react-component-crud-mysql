@@ -4,6 +4,8 @@ import { Switch, Route, Link } from "react-router-dom";
 import AddTutorial from "./components/add-tutorial.component";
 // import Tutorial from "./components/tutorial.component";
 // import TutorialsList from "./components/tutorials-list.component";
+import FormValidation from "./components/FormValidation";
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -27,6 +29,11 @@ function App() {
               Add
             </Link>
           </li>
+          <li className="nav-item">
+            <Link to={"/formvalidation"} className="nav-link">
+              Form  Validate
+            </Link>
+          </li>
         </div>
       </nav>
 
@@ -35,6 +42,7 @@ function App() {
           {/* <Route exact path={["/", "/tutorials"]} component={TutorialsList} /> */}
           <Route exact path="/add" component={AddTutorial} />
           {/* <Route path="/tutorials/:id" component={Tutorial} /> */}
+          <Route exact path="/formvalidation" component={FormValidation} />
         </Switch>
       </div>
     </div>
